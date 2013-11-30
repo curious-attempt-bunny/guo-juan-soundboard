@@ -1,0 +1,8 @@
+html
+  div(style="margin-left: auto; margin-right:auto; width:600px")
+    h1 Guo Juan Soundboard
+    img(src="images/guo juan.jpg", style="width: 100%; z-index: -1;")
+    - for(var i=0; i<sounds.length; i++)
+      audio(id)
+       source(src=sounds[i],type='audio/mpeg; codecs="mp3"', title=sounds[i])
+      button(onclick='new Audio("sounds/'+sounds[i]+'").play();')= sounds[i].substring(0, sounds[i].length-4)
