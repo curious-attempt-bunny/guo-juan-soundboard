@@ -5,4 +5,4 @@ html
     - for(var i=0; i<sounds.length; i++)
       audio(id)
        source(src=sounds[i],type='audio/mpeg; codecs="mp3"', title=sounds[i])
-      button(onclick='new Audio("sounds/'+sounds[i]+'").play();')= sounds[i].substring(0, sounds[i].length-4)
+      div(style="display:inline-block; margin-right: 1em; border: 1px solid; padding: 0.5em; margin-top: 0.5em; cursor: hand;", onclick='new Audio("sounds/'+sounds[i]+'").play();')= sounds[i].substring(0, sounds[i].length-4)
